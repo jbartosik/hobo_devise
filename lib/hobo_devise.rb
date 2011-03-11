@@ -1,3 +1,5 @@
+require 'hobo_devise/database_authenticable.rb'
+
 class ActiveRecord::Base
   def self.hobo_devise_user_model(opts={})
 
