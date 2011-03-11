@@ -5,13 +5,13 @@ begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
     gem.name = "hobo_devise"
-    gem.summary = %Q{TODO: one-line summary of your gem}
-    gem.description = %Q{TODO: longer description of your gem}
+    gem.summary = "Gem that adds devise based authentication to hobo-based applications"
+    gem.description = ""
     gem.email = "jbartosik@gmail.com"
     gem.homepage = "http://github.com/ahenobarbi/hobo_devise"
     gem.authors = ["Joachim Filip Ignacy Bartosik"]
-    gem.add_development_dependency "thoughtbot-shoulda", ">= 0"
-    # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
+    gem.add_development_dependency "hobo", ">= 1.3.0.pre28"
+    gem.add_development_dependency "devise", ">= 1.1.7"
   end
   Jeweler::GemcutterTasks.new
 rescue LoadError
