@@ -1,0 +1,40 @@
+For now there is a number of things you need to do to use this gem:
+1) Create your hobo application
+2) In your user model rename field
+
+    email_address
+
+to
+
+    email
+
+3) Edit your mailers and lifecycles to use
+
+    email
+
+field, not
+
+    email_address
+
+4) In your user model replace
+
+    hobo_devise_user_model
+
+with
+
+    hobo_devise_user_model :auth_methods => [:database_authenticable,
+                                              :devise_oauth2_facebook]
+
+5) In your users controller replace
+
+    hobo_user_controller
+
+with
+
+    hobo_devise_oauth2_facebook_controller(YourUserModelName)
+
+6) Add routes in config/routes.rb
+
+    match 'user_fb_auth', :controller => 'your_model_name', :action => 'auth', :as => "user_fb_auth"
+    match 'user_fb_callback', :controller => 'your_model_name', :action => 'callback', :as => "user_fb_callback"
+
