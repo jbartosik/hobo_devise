@@ -12,6 +12,7 @@ begin
     gem.authors = ["Joachim Filip Ignacy Bartosik"]
     gem.add_development_dependency "hobo", ">= 1.3.0.pre28"
     gem.add_development_dependency "devise", ">= 1.1.7"
+    gem.add_development_dependency "devise_oauth2_facebook"
   end
   Jeweler::GemcutterTasks.new
 rescue LoadError

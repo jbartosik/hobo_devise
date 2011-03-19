@@ -23,9 +23,6 @@ module HoboDevise
       def password_salt=(n); salt=n; end
       def encrypted_password; read_attribute(:crypted_password); end
       def encrypted_password=(n); write_attribute(:crypted_password, n); end
-      # (Should be login_attribute, not email_address?)
-      def email; email_address; end
-      def email(n); email_address = n; end
 
       ## This is c&p from devise sources. I'm not sure why, but it's necessary
       require 'bcrypt'
