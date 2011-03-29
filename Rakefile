@@ -10,9 +10,9 @@ begin
     gem.email = "jbartosik@gmail.com"
     gem.homepage = "http://github.com/ahenobarbi/hobo_devise"
     gem.authors = ["Joachim Filip Ignacy Bartosik"]
-    gem.add_development_dependency "hobo", ">= 1.3.0.pre28"
-    gem.add_development_dependency "devise", ">= 1.1.7"
-    gem.add_development_dependency "devise_oauth2_facebook"
+    gem.add_dependency "hobo", ">= 1.3.0.pre28"
+    gem.add_dependency "devise", ">= 1.1.7"
+    gem.add_dependency "devise_oauth2_facebook"
   end
   Jeweler::GemcutterTasks.new
 rescue LoadError
@@ -49,6 +49,6 @@ Rake::RDocTask.new do |rdoc|
 
   rdoc.rdoc_dir = 'rdoc'
   rdoc.title = "hobo_devise #{version}"
-  rdoc.rdoc_files.include('README*')
+  rdoc.rdoc_files.include('README')
   rdoc.rdoc_files.include('lib/**/*.rb')
 end
