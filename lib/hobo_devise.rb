@@ -6,6 +6,7 @@ class ActiveRecord::Base
 
     self.class_eval do
       hobo_user_model
+      alias_attribute :email_address, :email
       fields do
         email         :email_address, :login => true
       end
